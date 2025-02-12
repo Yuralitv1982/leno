@@ -17,27 +17,6 @@ const modal = document.getElementById('videoModal');
 const videoButton = document.querySelector('.preview__video-button');
 const closeButton = document.querySelector('.modal__close-button');
 
-videoButton.addEventListener('click', function () {
-   modal.style.display = 'block';
-   // replace the src attribute with video url
-   videoPlayer.src = 'https://www.youtube.com/embed/8sXRyHI3bLw';
-   // console.log(videoPlayer);
-
-   // close modal on close btn click
-
-   closeButton.addEventListener('click', function () {
-      modal.style.display = 'none';
-      videoPlayer.src = '';
-   });
-
-   window.addEventListener('click', function (event) {
-      if (event.target == modal) {
-         modal.style.display = 'none';
-         videoPlayer.src = '';
-      }
-   });
-});
-
 // navigation background on scroll
 window.addEventListener('scroll', function () {
    const navbar = this.document.querySelector('.navbar');
@@ -48,3 +27,26 @@ window.addEventListener('scroll', function () {
       navbar.classList.remove('navbar-scroll');
    }
 });
+
+if (videoButton !== null) {
+   videoButton.addEventListener('click', function () {
+      modal.style.display = 'block';
+      // replace the src attribute with video url
+      videoPlayer.src = 'https://www.youtube.com/embed/8sXRyHI3bLw';
+      // console.log(videoPlayer);
+
+      // close modal on close btn click
+
+      closeButton.addEventListener('click', function () {
+         modal.style.display = 'none';
+         videoPlayer.src = '';
+      });
+
+      window.addEventListener('click', function (event) {
+         if (event.target == modal) {
+            modal.style.display = 'none';
+            videoPlayer.src = '';
+         }
+      });
+   });
+}
