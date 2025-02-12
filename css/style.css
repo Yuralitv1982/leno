@@ -483,6 +483,124 @@ img {
    justify-content: space-around;
    text-align: center;
 }
+
+/* screenshots */
+.screenshots {
+   padding: 6rem 2rem;
+   background: var(--ternaty-color);
+   text-align: center;
+}
+
+.screenshots__container {
+   max-width: 1200px;
+}
+
+.screenshots__titel {
+   font-size: 2.3rem;
+   text-transform: uppercase;
+   border-bottom: 2px solid var(--primary-color);
+   width: 300px;
+   margin: 0 auto 2.5rem;
+}
+
+.screenshots__images {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   flex-wrap: wrap;
+}
+
+.screenshots__images img {
+   width: 100%;
+   max-width: 200px;
+   margin: 0 auto;
+}
+
+/* download */
+.download {
+   background: #000 url('../images/download-background.jpg') center center/cover
+      no-repeat;
+   padding: 11.5rem 2rem 8rem;
+}
+
+.download__container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 2rem;
+}
+
+.download__content {
+   max-width: 500px;
+}
+
+.download__description {
+   font-size: 1.5rem;
+   margin-top: 1.5rem;
+   line-height: 1.6;
+   text-align: center;
+}
+
+.download__image img {
+   width: 100%;
+   max-width: 500px;
+}
+
+.download__buttons {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1.5rem;
+   margin-top: 2rem;
+}
+
+.download__button {
+   padding: 1rem 2rem;
+}
+
+.download__button i {
+   margin-right: 0.5rem;
+}
+
+/* footer */
+
+.footer {
+   background: var(--ternaty-color);
+   color: #9f9caf;
+   padding: 4rem 2rem;
+   font-size: 0.9rem;
+}
+
+.footer__liks-link,
+.footer__social-link {
+   color: #9f9caf;
+}
+
+.footer__liks-link:hover,
+.footer__social-link:hover {
+   color: #fff;
+}
+
+.footer__container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   justify-content: space-between;
+   align-items: center;
+   gap: 6rem;
+}
+
+.footer__title {
+   font-size: 1.2rem;
+   color: #fff;
+   margin-bottom: 0.5rem;
+}
+
+.footer__social {
+   display: flex;
+   gap: 1.5rem;
+   justify-content: center;
+}
+
 /* media queries */
 
 @media (max-width: 992px) {
@@ -574,6 +692,35 @@ img {
       flex-direction: column;
       gap: 2rem;
       margin-top: 4rem;
+   }
+
+   .download {
+      padding-top: 10rem;
+      text-align: center;
+   }
+
+   .download__container {
+      flex-direction: column-reverse;
+   }
+
+   .download__buttons {
+      flex-direction: column;
+   }
+
+   .download__button {
+      width: 100%;
+      padding: 0.7rem;
+   }
+
+   .footer {
+      font-size: 2rem;
+   }
+
+   .footer__container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+      max-width: 600px;
    }
 }
 @media (max-width: 768px) {
